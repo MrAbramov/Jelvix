@@ -1,0 +1,50 @@
+.section-main {
+    &::after {
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        background: url(../img/bg-main.webp) no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: -55vw;
+        top: -15vh;
+        z-index: -1;
+    }
+
+    .container {
+        min-height: calc(100vh - 80px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .text-wrapper {
+        max-width: 498px;
+        color: $primary-text-color;
+
+        .title {
+            text-align: left;
+            font-size: 87px;
+            line-height: 100%;
+
+            .decore-text {
+
+                &::after {
+                    height: 20px;
+                }
+            }
+        }
+
+        .description {
+            font-size: 17px;
+            line-height: 24.87px;
+            margin-top: 27px;
+            margin-bottom: 31px;
+
+        }
+    }
+
+    .img-wrapper {
+        max-width: 731px;
+    }
+}

@@ -1,0 +1,54 @@
+.form-wrapper {
+    .form-item {
+        max-width: 406px;
+        width: 100%;
+
+
+        .description {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .input-wrapper {
+            margin-top: 15px;
+            display: flex;
+            position: relative;
+            letter-spacing: 2%;
+
+            input {
+                width: 100%;
+                border: 1;
+                outline: unset;
+
+                &::placeholder {
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+            }
+
+            &.error {
+                &::after {
+                    position: absolute;
+                    color: $danger-text-color;
+                    font-size: 14px;
+                    left: 10px;
+                    bottom: -25px;
+                    content: attr(data-error);
+                }
+
+                .default-input {
+                    border-color: $danger-text-color;
+                }
+            }
+
+        }
+    }
+
+    .default-input {
+        background: transparent;
+        padding: 13px;
+        border: 1px solid #FFFFFF;
+        border-right: 0;
+        color: #FFFFFF;
+    }
+}
